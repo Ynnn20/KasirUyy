@@ -31,17 +31,17 @@ include 'fungsi/rupiah.php';
     $level = $_SESSION['level'];
 
       if ($level=="Admin") {
-        $color = "#dc3545";
-        $color2 = "#BC3C49";
+        $color = "#2F4F4F";
+        $color2 = "#253D3D";
       } elseif ($level=="Waiter") {
-        $color = "#2c7873";
-        $color2 = "#388681";
+        $color = "#2C3E50";
+        $color2 = "#253443";
       } elseif ($level=="Kasir") {
-        $color = "#527318";
-        $color2 = "#5D7F22";
+        $color = "#333333";
+        $color2 = "#262626";
       } elseif ($level=="Owner") {
-        $color = "#192965";
-        $color2 = "#23347A";
+        $color = "#0A3D62";
+        $color2 = "#083354";
           } else {
         $color = "#513F40";
         $color2 = "#544A4A";
@@ -269,15 +269,13 @@ include 'fungsi/rupiah.php';
             ?>
 
             <?php if ($level=="Admin"): ?>
-              <a class="nav-link nav-item <?= $dash ?>" href="index.php?dashboard">Dashboard <span class="sr-only">(current)</span></a>
-              <a class="nav-link" data-toggle="modal" data-target=".bd-example-modal-xl">
-                <i class="fa fa-shopping-cart mr-1"></i>Keranjang<span class="mr-1"></span>
-              </a>  
+              <a class="nav-link nav-item <?= $dash ?>" href="index.php?dashboard">Dashboard <span class="sr-only">(current)</span></a> 
 
             <?php elseif ($level=="Waiter"): ?>
               <a class="nav-link nav-item <?= $home ?>" href="index.php">Home <span class="sr-only">(current)</span></a>
-              <div class="nav-item dropdown <?= $us ?><?= $m ?>">
-              </div>
+              <a class="nav-link" data-toggle="modal" data-target=".bd-example-modal-xl">
+                <i class="fa fa-shopping-cart mr-1"></i>Keranjang<span class="mr-1"></span>
+              </a>
 
             <?php elseif ($level=="Kasir"): ?>
               <a class="nav-link nav-item <?= $home ?>" href="index.php">Home <span class="sr-only">(current)</span></a>
@@ -287,10 +285,12 @@ include 'fungsi/rupiah.php';
 
             <?php elseif ($level=="Owner"): ?>
               <a class="nav-link nav-item <?= $dash ?>" href="index.php?dashboard">Dashboard <span class="sr-only">(current)</span></a>
-              <a class="nav-link nav-item <?= $lap ?>" href="index.php?laporan">Laporan <span class="sr-only">(current)</span></a>
 
             <?php elseif ($level=="Pelanggan" || $level==""): ?>
               <a class="nav-link nav-item <?= $home ?>" href="index.php">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" data-toggle="modal" data-target=".bd-example-modal-xl">
+                <i class="fa fa-shopping-cart mr-1"></i>Keranjang<span class="mr-1"></span>
+              </a>
 
             <?php endif; ?>
 

@@ -20,14 +20,6 @@ $sql2 = mysqli_query($kon, "SELECT * FROM tb_level");
 				  			<input type="text" class="form-control" id="nama_user" name="nama_user" value="<?= $data['nama_user'] ?>">
 				  		</div>
 				  		<div class="form-group">
-				  			<label class="form-label" for="username">Username</label>	
-				  			<input type="text" class="form-control" id="username" name="username" value="<?= $data['username'] ?>">
-				  		</div>
-				  		<div class="form-group">
-				  			<label class="form-label" for="password">Password</label>	
-				  			<input type="text" class="form-control" id="password" name="password" value="<?= $data['password'] ?>">
-				  		</div>
-				  		<div class="form-group">
 				  			<label class="form-label" for="id_level">Level</label>
 				  			<select name="id_level" id="id_level" class="form-control">
 				  				<?php foreach ($sql2 as $level): ?>

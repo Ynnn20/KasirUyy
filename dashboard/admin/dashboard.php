@@ -24,18 +24,18 @@ $owner = mysqli_fetch_assoc($jumlahowner);
 <?php
     $level = $_SESSION['level'];
 
-      if ($level=="Admin") {
-        $color = "#dc3545";
-        $color2 = "#BC3C49";
+    if ($level=="Admin") {
+        $color = "#2F4F4F";
+        $color2 = "#253D3D";
       } elseif ($level=="Waiter") {
-        $color = "#2c7873";
-        $color2 = "#388681";
+        $color = "#2C3E50";
+        $color2 = "#253443";
       } elseif ($level=="Kasir") {
-        $color = "#527318";
-        $color2 = "#5D7F22";
+        $color = "#333333";
+        $color2 = "#262626";
       } elseif ($level=="Owner") {
-        $color = "#192965";
-        $color2 = "#23347A";
+        $color = "#0A3D62";
+        $color2 = "#083354";
           } else {
         $color = "#513F40";
         $color2 = "#544A4A";
@@ -43,15 +43,16 @@ $owner = mysqli_fetch_assoc($jumlahowner);
     ?>
 
 <div class="container mt-3">
-	<div class="card bg-danger text-white border-danger mb-3">
+	<div class="card text-white mb-3" style="background-color: <?= $color ?>;">
 		<div class="row no-gutters">
-			<div class="col-md-2">
-				<img src="assets/image/adminLogo.png" class="p-3" alt="foto" width="100%">
+			<div class="col-md-2" style="background-color: <?= $color2 ?>;">
+				<img src="assets/image/1man.png" class="p-3" alt="foto" width="100%">
 			</div>
-			<div class="col-md-10" style="background-color: <?= $color2 ?>;">
+			<div class="col-md-10" >
 				<div class="card-body">
-					<h4 class="card-title">Selamat Datang di Kasir Uyy<?= $_SESSION['level'] ?></h4>
-					<p class="card-text" style="font-size: 20px;"><?= $_SESSION['nama_user'] ?></p>
+					<h4 class="card-title">Selamat Datang di Kasir Uyy <img src="assets/image/kasir.png" alt="" width="30" height="30" class="mb-1"></h4>
+                    <p class="card-text" style="font-size: 20px;">Posisi : <?= $_SESSION['level'] ?></p>
+					<p class="card-text" style="font-size: 20px;">Nama : <?= $_SESSION['nama_user'] ?></p>
 				</div>
 			</div>
 		</div>
@@ -99,7 +100,7 @@ $owner = mysqli_fetch_assoc($jumlahowner);
                 <div class="col-md-10">
                     <div class="ml-3 card-body">
                         <h6 class="card-title">Total Menu yang ada: </h6>
-                        <span class="btn btn-danger btn-sm"><?= $makanan['makanan'] ?> menu </span>
+                        <span class="btn btn-warning btn-sm"><?= $makanan['makanan'] ?> menu </span>
                     </div>
                 </div>
             </div>

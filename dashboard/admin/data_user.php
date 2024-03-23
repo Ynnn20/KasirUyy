@@ -13,8 +13,6 @@
 					<tr>
 						<th>No</th>
 						<th>Nama User</th>
-						<th>Username</th>
-						<th>Password</th>
 						<th>Level</th>
 						<?php if ($_SESSION['level'] == "Admin"): ?>
 							<th>Aksi</th>	
@@ -30,8 +28,6 @@
 					<tr>
 						<td><?= $i++; ?></td>
 						<td><?= $data['nama_user'] ?></td>
-						<td><?= $data['username'] ?></td>
-						<td><?= $data['password'] ?></td>
 						<?php  
 							if ($data['id_level']==1) {
 								$level = "Admin";
@@ -50,8 +46,18 @@
 						<?php if ($_SESSION['level'] == "Admin"): ?>
 						<td>
 							<div class="btn-group">
-								<a href="index.php?ubah_user=<?= $data['id_user'] ?>" class="btn btn-sm btn-warning">Ubah</a>
-								<a href="fungsi/hapusUser.php?id_user=<?= $data['id_user']; ?>" class="btn btn-danger btn-sm">Hapus</a>
+								<a href="index.php?ubah_user=<?= $data['id_user'] ?>" class="btn btn-sm btn-warning btn-icon-split" style="margin-right: 5px;">
+									<span class="icon text-dark-50">
+										<i class="fas fa-cog"></i>
+									</span>
+									<span class="text">Ubah</span>
+								</a>
+								<a href="fungsi/hapusUser.php?id_user=<?= $data['id_user']; ?>" class="btn btn-sm btn-danger btn-icon-split">
+									<span class="icon text-white-50">
+										<i class="fas fa-exclamation-circle"></i>
+									</span>
+									<span class="text">Hapus</span>
+								</a>
 							</div>
 						</td>
 					<?php endif; ?>

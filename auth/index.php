@@ -41,11 +41,13 @@ if (isset($_SESSION['level'])) {
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form" action="cek_login.php" method="post">
-					<span class="login100-form-title p-b-26">
-						Halaman Login Kasir
+				<form class="login100-form validate-form p-b-2" action="cek_login.php" method="post">
+					<span class="login100-form-title p-b-2">
+						<img src="../dashboard/assets/image/kasir.png" alt="Kasir Uyy" width="100" height="100" class="mb-1">
 					</span>
-					
+					<span class="login100-form-title p-b-30">
+						Halaman Login Kasir Uyy
+					</span>		
 					
 					<?php
 						if(isset($_GET['pesan'])) {
