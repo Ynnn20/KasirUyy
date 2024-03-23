@@ -1,0 +1,43 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 180px; /* Sesuaikan lebar sesuai kebutuhan */
+  overflow-y: auto;
+  padding-top: 3rem; /* Sesuaikan dengan tinggi navbar */
+  background-color: #333; /* Ganti warna latar belakang */
+  border-right: 1px solid #555; /* Tambahkan garis tepi */
+}
+
+.sidebar .container {
+  padding-left: 0px;
+  padding-right: 2px;
+}
+
+.sidebar .navbar-brand {
+  margin-bottom: 20px; /* Sesuaikan margin sesuai kebutuhan */
+  color: #fff; /* Warna teks */
+  font-size: 1.5rem; /* Ukuran teks */
+}
+
+.sidebar .nav-link {
+  color: #fff;
+  padding: 20px 5px;
+  width: 180px; /* Sesuaikan lebar sesuai kebutuhan */
+  transition: background-color 0.3s; /* Tambahkan efek transisi */
+}
+
+.sidebar .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 180px; /* Sesuaikan lebar sesuai kebutuhan */
+}
+
+.sidebar .active {
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 180px; /* Sesuaikan lebar sesuai kebutuhan */
+}
+
+.sidebar .nav-link.active {
+  font-weight: bold; /* Tambahkan penanda untuk tautan aktif */
+}
