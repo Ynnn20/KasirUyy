@@ -50,6 +50,13 @@ include 'fungsi/rupiah.php';
     
     <nav class="sidebar" style="background-color: <?= $color2 ?>;">
     <div class="container">
+      <a class="navbar-brand" href="#" style="position: absolute; top: 10px; left: 15px;">
+        <img src="assets/image/kasir.png" alt="" width="30" height="30" class="mb-1">
+        Kasir Uyy
+      </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
       
       <ul class="navbar-nav mr-auto">
           <?php
@@ -230,8 +237,8 @@ include 'fungsi/rupiah.php';
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         </ul>
       </div>
-    </div>
-  </nav>
+    </div>
+  </nav>
 
 <!-- navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: <?= $color ?>;">

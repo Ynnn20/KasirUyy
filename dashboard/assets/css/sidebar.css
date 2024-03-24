@@ -41,3 +41,7 @@
 .sidebar .nav-link.active {
   font-weight: bold; /* Tambahkan penanda untuk tautan aktif */
 }
+
+.navbar-brand .border-bottom-white {
+  border-bottom: 1px solid white; /* Atur ketebalan dan warna yang sesuai */
+}
