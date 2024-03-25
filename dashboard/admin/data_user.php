@@ -38,7 +38,7 @@
 							} elseif ($data['id_level']==4) {
 								$level = "Owner";
 							} else {
-								$level = "Pembelian";
+								$level = "Pelanggan";
 
 							}
 						?>

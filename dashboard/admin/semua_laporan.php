@@ -2,8 +2,18 @@
 session_start();
 include '../../koneksi.php';
 include '../fungsi/rupiah.php';
-$laporan = mysqli_query($kon, "SELECT * FROM tb_transaksi ORDER BY id_transaksi DESC")
+
+// Assuming you want to display the current month
+
+// Assuming you want to calculate the total income for today
+$date = date('d-m-Y');
+$total_bayar = mysqli_query($kon, "SELECT SUM(totbar_transaksi) AS totbar FROM tb_transaksi WHERE aTanggal_transaksi = '$date' ");
+$total_result = mysqli_fetch_assoc($total_bayar);
+$total = $total_result['totbar'];
+
+$laporan = mysqli_query($kon, "SELECT * FROM tb_transaksi ORDER BY id_transaksi DESC");
 ?> 
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -59,6 +69,21 @@ $laporan = mysqli_query($kon, "SELECT * FROM tb_transaksi ORDER BY id_transaksi 
                   <?php endforeach; ?>
                 </tbody>
               </table>
+              <!-- <div class="col-md-6">
+                <div class="card border-primary mb-3">
+                  <div class="row">
+                    <div class="col-md-2">
+                      <i class="fa fa-money-bill p-3 mt-2 fa-4x"></i>
+                    </div>
+                    <div class="col-md-10">
+                      <div class="card-body">
+                        <h5 class="card-title">Total Pendapatan hari ini:</h5>
+                        <span class="">Rp. <?= rupiah($total) ?></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
             </div>
           </div>
         </div>
